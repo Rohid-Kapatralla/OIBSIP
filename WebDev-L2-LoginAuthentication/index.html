@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureAuth - Login Authentication System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="auth-container">
+
+        <!-- LOGIN PAGE -->
+        <section class="auth-card page active" id="loginPage">
+
+            <div class="brand-icon">🔐</div>
+
+            <h1>Welcome Back</h1>
+            <p class="subtitle">Sign in to continue to your account</p>
+
+            <form id="loginForm">
+
+                <div class="input-group">
+                    <label for="loginEmail">Email Address</label>
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="loginPassword">Password</label>
+
+                    <div class="password-wrapper">
+                        <input
+                            type="password"
+                            id="loginPassword"
+                            placeholder="Enter your password"
+                            required
+                        >
+                        <button
+                            type="button"
+                            class="toggle-password"
+                            id="loginToggle"
+                        >👁️</button>
+                    </div>
+                </div>
+
+                <div class="form-options">
+                    <label class="remember">
+                        <input type="checkbox" id="rememberMe">
+                        <span>Remember me</span>
+                    </label>
+
+                    <button type="button" class="text-link" id="forgotLink">
+                        Forgot Password?
+                    </button>
+                </div>
+
+                <button type="submit" class="primary-btn">
+                    Login
+                </button>
+
+                <p id="loginMessage" class="message"></p>
+
+            </form>
+
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+            <p class="switch-text">
+                Don't have an account?
+                <button type="button" class="text-link" id="signupLink">
+                    Create Account
+                </button>
+            </p>
+
+        </section>
+
+
+        <!-- REGISTRATION PAGE -->
+        <section class="auth-card page" id="registerPage">
+
+            <div class="brand-icon">✨</div>
+
+            <h1>Create Account</h1>
+            <p class="subtitle">Create your account to get started</p>
+
+            <form id="registerForm">
+
+                <div class="input-group">
+                    <label for="registerName">Full Name</label>
+                    <input
+                        type="text"
+                        id="registerName"
+                        placeholder="Enter your full name"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="registerEmail">Email Address</label>
+                    <input
+                        type="email"
+                        id="registerEmail"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="registerPassword">Password</label>
+
+                    <div class="password-wrapper">
+                        <input
+                            type="password"
+                            id="registerPassword"
+                            placeholder="Minimum 8 characters + 1 number"
+                            required
+                        >
+                        <button
+                            type="button"
+                            class="toggle-password"
+                            id="registerToggle"
+                        >👁️</button>
+                    </div>
+
+                    <small class="password-hint">
+                        Minimum 8 characters and at least 1 number
+                    </small>
+                </div>
+
+                <div class="input-group">
+                    <label for="confirmPassword">Confirm Password</label>
+
+                    <div class="password-wrapper">
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            placeholder="Confirm your password"
+                            required
+                        >
+                        <button
+                            type="button"
+                            class="toggle-password"
+                            id="confirmToggle"
+                        >👁️</button>
+                    </div>
+                </div>
+
+                <button type="submit" class="primary-btn">
+                    Create Account
+                </button>
+
+                <p id="registerMessage" class="message"></p>
+
+            </form>
+
+            <p class="switch-text">
+                Already have an account?
+                <button type="button" class="text-link" id="backToLogin">
+                    Back to Login
+                </button>
+            </p>
+
+        </section>
+
+
+        <!-- FORGOT PASSWORD PAGE -->
+        <section class="auth-card page" id="forgotPage">
+
+            <div class="brand-icon">🔑</div>
+
+            <h1>Reset Password</h1>
+            <p class="subtitle">
+                Enter your registered email to reset your password
+            </p>
+
+            <form id="forgotForm">
+
+                <div class="input-group">
+                    <label for="forgotEmail">Email Address</label>
+                    <input
+                        type="email"
+                        id="forgotEmail"
+                        placeholder="Enter your registered email"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="newPassword">New Password</label>
+
+                    <div class="password-wrapper">
+                        <input
+                            type="password"
+                            id="newPassword"
+                            placeholder="Minimum 8 characters + 1 number"
+                            required
+                        >
+                        <button
+                            type="button"
+                            class="toggle-password"
+                            id="newPasswordToggle"
+                        >👁️</button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="confirmNewPassword">
+                        Confirm New Password
+                    </label>
+
+                    <div class="password-wrapper">
+                        <input
+                            type="password"
+                            id="confirmNewPassword"
+                            placeholder="Confirm new password"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <button type="submit" class="primary-btn">
+                    Reset Password
+                </button>
+
+                <p id="forgotMessage" class="message"></p>
+
+            </form>
+
+            <p class="switch-text">
+                Remember your password?
+                <button type="button" class="text-link" id="forgotBackLogin">
+                    Back to Login
+                </button>
+            </p>
+
+        </section>
+
+
+        <!-- DASHBOARD PAGE -->
+        <section class="dashboard-card page" id="dashboardPage">
+
+            <div class="dashboard-header">
+
+                <div class="dashboard-icon">
+                    🎉
+                </div>
+
+                <div>
+                    <span class="status-badge">
+                        ● Authenticated
+                    </span>
+
+                    <h1 id="welcomeName">
+                        Welcome Back!
+                    </h1>
+
+                    <p id="welcomeEmail"></p>
+                </div>
+
+            </div>
+
+            <div class="dashboard-content">
+
+                <div class="info-card">
+                    <span>👤</span>
+                    <div>
+                        <h3>Account</h3>
+                        <p>Successfully authenticated</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <span>🔒</span>
+                    <div>
+                        <h3>Security</h3>
+                        <p>Your password is securely hashed</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <span>✅</span>
+                    <div>
+                        <h3>Session</h3>
+                        <p>You are currently logged in</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <button type="button" class="logout-btn" id="logoutBtn">
+                Logout
+            </button>
+
+        </section>
+
+    </div>
+
+    <footer>
+        <p>SecureAuth • Oasis Infobyte Web Development & Designing Internship</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
